@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html>  
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>Mi Portafolio</title>
-        <link href="estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <script src="js/proyectos.js" defer></script>
     </head>
     <body>
         <header id="encabezado">
+            <h1>Juan Thove</h1>
             <div class="link-boton">
-                <a href="https://uy.linkedin.com/in/juan-thove" target="blank">Linkedin</a>
-                <a href="mailto:juanthove911@gmail.com">Email</a>
+                <a href="CVJuanThove.pdf" download="CV Juan Thove" id="cv"><img src="img/flechaDescarga.png" id="imagenCV"> <div id="descargarCV">Descargar CV</div></a>
+                <a href="https://github.com/juanthove" target="blank"><img src="img/githubLogo.png" alt="Github" id="github"></a>
+                <a href="https://uy.linkedin.com/in/juan-thove" target="blank"><img src="img/linkedinLogo.png" alt="Linkedin" id="linkedin"></a>
+                <a href="mailto:juanthove911@gmail.com"><img src="img/gmailLogo.png" alt="Gmail" id="gmail"></a>
             </div>
         </header>
         
-        <h1>Juan Thove</h1>
-        <div class="presentacion">
-            <img src="Yo.jpeg" id="yo">
-            <p class="texto">Hola, mi nombre es Juan Thove, soy un estudiante de desarrollo full stack de Colonia del Sacramento.</p>
+        <div id="primeraSection">
+            <div class="section">
+                <div class="presentacion">
+                    <img src="img/Yo.jpeg" id="yo">
+                    <p class="texto">&lt;p&gt;Hola, mi nombre es Juan Thove, soy un estudiante de desarrollo full stack de Colonia del Sacramento.&lt;/p&gt;</p>
+                </div>
+            </div>
         </div>
 
-        <hr>
+        <div class="section">
+            <h2>Habilidades</h2>
+            <ul class="lista">
+                <li>Java</li>
+                <li>C++</li>
+                <li>.NET</li>
+                <li>Python</li>
+                <li>Unity</li>
+                <li>Genexus</li>
+            </ul>
+        </div>
 
-        <h2>Habilidades</h2>
-        <ul class="lista">
-            <li>Java</li>
-            <li>Python</li>
-            <li>.NET</li>
-            <li>Unity</li>
-        </ul>
+        <div class="section">
+            <h2>Estudios</h2>
+            <ul class="lista">
+                <li>Bachillerato en Informatica</li>
+                <li>Licenciatura en Informatica (En curso)</li>
+                <li>Jovenes a Programar (En curso)</li>
+            </ul>
+        </div>
 
-        <h2>Estudios</h2>
-        <ul class="lista">
-            <li>Bachillerato en Informatica</li>
-            <li>Licenciatura en Informatica (En curso)</li>
-            <li>Jovenes a Programar (En curso)</li>
-        </ul>
-
-        <h2>Proyectos</h2>
-        <p>Videojuego online para dos personas de estrategia sobre drones atacando una fortaleza en Unity</p>
-        <img src="videojuego.jpeg" id="juego">
+        <div class="section">
+            <h2>Proyectos</h2>
+            <button id="botonAnt" class="flecha">⟨</button>
+            <div id="proyectos">
+            </div>
+            <button id="botonSig" class="flecha">⟩</button>
+        </div>
+        
+        
     </body>
 </html>
