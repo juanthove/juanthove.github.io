@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Java",
+        "image": "img/javaLogo.png"
+    },
+    {
+        "name": "C++",
+        "image": "img/c++Logo.png"
+    },
+
+    {
+        "name": ".NET",
+        "image": "img/netLogo.png"
+    },
+
+    {
+        "name": "Python",
+        "image": "img/pythonLogo.png"
+    },
+    
+    {
+        "name": "Unity",
+        "image": "img/unityLogo.png"
+    },
+
+    {
+        "name": "Genexus",
+        "image": "img/genexusLogo.png"
+    }
+]

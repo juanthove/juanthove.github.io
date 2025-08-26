@@ -5,55 +5,78 @@
         <meta charset="UTF-8">
         <title>Mi Portafolio</title>
         <link href="css/estilos.css" rel="stylesheet" type="text/css">
-        <script src="js/proyectos.js" defer></script>
+        <script src="js/informacionIdioma.js" defer></script>
     </head>
     <body>
+        <!--Encabezado-->
         <header id="encabezado">
             <h1>Juan Thove</h1>
-            <div class="link-boton">
-                <a href="CVJuanThove.pdf" download="CV Juan Thove" id="cv"><img src="img/flechaDescarga.png" id="imagenCV"> <div id="descargarCV">Descargar CV</div></a>
-                <a href="https://github.com/juanthove" target="blank"><img src="img/githubLogo.png" alt="Github" id="github"></a>
-                <a href="https://uy.linkedin.com/in/juan-thove" target="blank"><img src="img/linkedinLogo.png" alt="Linkedin" id="linkedin"></a>
-                <a href="mailto:juanthove911@gmail.com"><img src="img/gmailLogo.png" alt="Gmail" id="gmail"></a>
+            <div class="botonEncabezado">
+                <!--<button id="modoOscuro">Modo Oscuro</button>-->
+                <div id="anclas">
+                    <a href="#sectionSobreMi" id="sobreMi"></a>
+                    <a href="#sectionTecnologias" class="tecnologias"></a>
+                    <a href="#sectionProyectos" class="textoProyectos"></a>
+                    <a href="#sectionEstudios" class="estudios"></a>
+                    <a href="#sectionContacto" class="contacto"></a>
+                </div>
+
+                <div id="idiomas">
+                    <button class="idioma" id="botonEsp"><img src="img/banderaEspaña.png"></button>
+                    <button class="idioma" id="botonEng"><img src="img/banderEstadosUnidos.png"></button>
+                </div>
+                
+                
             </div>
         </header>
         
+
+        <!--Sobre Mi-->
         <div id="primeraSection">
-            <div class="section">
-                <div class="presentacion">
-                    <img src="img/Yo.jpeg" id="yo">
-                    <p class="texto">&lt;p&gt;Hola, mi nombre es Juan Thove, soy un estudiante de desarrollo full stack de Colonia del Sacramento.&lt;/p&gt;</p>
-                </div>
+            <img src="img/Yo.jpeg" id="yo">
+        </div>
+        
+        <div class="section" id="sectionSobreMi">
+            <div class="presentacion">
+                <p class="texto" id="textoPresentacion"></p>
+                <a href="CVJuanThove.pdf" download="CV Juan Thove" id="cv"><img src="img/flechaDescarga.png" id="imagenCV"> <div id="descargarCV"></div></a>
+                
             </div>
         </div>
+        
 
-        <div class="section">
-            <h2>Habilidades</h2>
-            <ul class="lista">
-                <li>Java</li>
-                <li>C++</li>
-                <li>.NET</li>
-                <li>Python</li>
-                <li>Unity</li>
-                <li>Genexus</li>
+        <!--Tecnologias-->
+        <div class="section"  id="sectionTecnologias">
+            <h2 class="tecnologias"></h2>
+            <div id="tecnologiasLista"></div>
+        </div>
+
+
+        <!--Proyectos-->
+        <div class="section" id="sectionProyectos">
+            <h2 class="textoProyectos"></h2>
+            <div id="proyectosLista"></div>
+        </div>
+
+        <!--Estudios-->
+        <div class="section" id="sectionEstudios">
+            <h2 class="estudios"></h2>
+            <ul class="lista" id="estudiosLista">
             </ul>
         </div>
 
-        <div class="section">
-            <h2>Estudios</h2>
-            <ul class="lista">
-                <li>Bachillerato en Informatica</li>
-                <li>Licenciatura en Informatica (En curso)</li>
-                <li>Jovenes a Programar (En curso)</li>
-            </ul>
-        </div>
 
-        <div class="section">
-            <h2>Proyectos</h2>
-            <button id="botonAnt" class="flecha">⟨</button>
-            <div id="proyectos">
+        <!--Contacto-->
+        <div class="section" id="sectionContacto">
+            <h2 class="contacto"></h2>
+            <p id="textoContacto"></p>
+            <div id="gmail">
+                <img src="img/gmailBlanco.png">
+                <p>juanthove911@gmail.com</p>
             </div>
-            <button id="botonSig" class="flecha">⟩</button>
+            <a href="https://github.com/juanthove" target="blank"><img src="img/githubLogo.png" alt="Github" id="github"></a>
+            <a href="https://uy.linkedin.com/in/juan-thove" target="blank"><img src="img/linkedinLogo.png" alt="Linkedin" id="linkedin"></a>
+            <!--<a href="mailto:juanthove911@gmail.com"><img src="img/gmailLogo.png" alt="Gmail" id="gmail"></a>-->
         </div>
         
         

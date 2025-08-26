@@ -1,0 +1,37 @@
+{
+    "title": "Mi portafolio",
+    "cv": "Descargar CV",
+    "sobreMi": "Sobre Mi",
+    "presentacion": "Hola, mi nombre es Juan Thove, soy un estudiante de desarrollo full stack de Colonia del Sacramento",
+    "tecnologias": "Tecnologías",
+    "proyectos": "Proyectos",
+    "proyectosLista": [
+        {
+            "title": "Videojuego para 2 personas",
+            "desc": "Videojuego online para dos personas de estrategia sobre drones atacando una fortaleza en Unity",
+            "year": 2024,
+            "image": "img/VideojuegoDrones.jpeg",
+            "tecnologias": [
+                "Python",
+                "Unity"
+            ]
+        },
+        {
+            "title": "Proyecto 2",
+            "desc": "Descripcion 2",
+            "year": "----",
+            "image": "img/ComingSoon.jpg",
+            "tecnologias": [
+                "Proximamente"
+            ]
+        }
+    ],
+    "estudios": "Estudios",
+    "estudiosLista": [
+        "Bachillerato en Informatica",
+        "Licenciatura en Informatica (En curso)",
+        "Jovenes a Programar (En curso)"
+    ],
+    "contacto": "Contactame",
+    "textoContacto": "Puedes contactarme mediante juanthove911@gmail.com o en mis redes"
+}
