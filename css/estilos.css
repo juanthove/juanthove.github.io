@@ -173,22 +173,22 @@ h1{
     color: #fdc21c;
 }
 
-#modoOscuro::before{
+#modoOscuro::before{ /*Crear el pseudoelemento del circulo blanco*/
     content: "";
     position: absolute;
     height: 1.7em;
     width: 1.7em;
     border-radius: 50%;
-    background-color: #ffffff;
-    border: solid thin #000;
+    background-color: white;
+    border: solid thin black;
     left: 0;
     right: unset;
 }
 
-#modoOscuro.activo::before{
+#modoOscuro.activo::before{ /*Crear el pseudoelemento del circulo blanco cuando está activo*/
     right: 0;
     left: unset;
-    border: solid thin #ffffff;
+    border: solid thin white;
 }
 
 #luna{
@@ -292,7 +292,6 @@ h1{
 }
 
 .tecnologia img{
-
     width: 2em;
     height: 2em;
     transition: all 0.6s ease; /*Que la transicion del aumento de tamaño demore 0.6 segundos y se haga suave*/

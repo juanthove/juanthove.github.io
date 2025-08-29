@@ -30,7 +30,7 @@ function mostrarProyectos(proyectos){
                 <p>${item.desc}</p>
                 <p>${item.year}</p>
                 <div class="tecnologiasProyecto"></div>
-                <a href="${item.github}" target="blank"><img src="img/logos/githubLogo${getModoTexto()}.png" alt="Github" class="githubProyecto"></a>
+                <a href="${item.github}" target="blank"><img src="img/logos/githubLogo${getModoTexto()}.svg" alt="Github" class="githubProyecto"></a>
               </div>
     `
   });
@@ -55,7 +55,7 @@ function insertarTecnologiasProyectos(proyectos, contenedorProyectos){
           //Inserto la tecnologia
           contenedorTecnologias.innerHTML += `
               <div class="tecnologiaProy">
-                  <img src="${tec.image}${getModoTexto()}.png" alt="${tec.name}">
+                  <img src="${tec.image}${getModoTexto()}.svg" alt="${tec.name}">
                   <p>${tec.name}</p>
                 </div>
           `
@@ -149,12 +149,25 @@ function mostrarTecnologias(){
 
   let listaTecnologias = document.getElementById("tecnologiasLista");
     tecnologias.forEach(item => {
-      listaTecnologias.innerHTML += `
-                <div class="tecnologia">
-                  <img src="${item.image}${getModoTexto()}.png" alt="${item.name}">
-                  <p>${item.name}</p>
-                </div>
-      `
+      //Creo el div que contiene la imagen y el texto
+      let divGeneral = document.createElement("div");
+      divGeneral.classList.add("tecnologia");
+
+      //Creo la imagen
+      let imagen = document.createElement("img");
+      imagen.src = `${item.image}${getModoTexto()}.svg`;
+      imagen.alt = item.name;
+
+      //Creo el texto
+      let texto = document.createElement("p");
+      texto.textContent = item.name;
+
+      //Agrego la imagen y el texto al div
+      divGeneral.appendChild(imagen);
+      divGeneral.appendChild(texto);
+
+      //Agrego el div general a la listaTecnologias
+      listaTecnologias.appendChild(divGeneral);
     });
 }
 
@@ -163,7 +176,7 @@ function mostrarTecnologias(){
 function actualizarModo(){
   //Cambio icono descarga CV
   let cv = document.getElementById("imagenCV");
-  cv.src= `img/logos/flechaDescarga${getModoTexto()}.png`;
+  cv.src= `img/logos/flechaDescarga${getModoTexto()}.svg`;
   
 
   //Actualizo los logos de las tecnologias de cada proyecto
@@ -173,7 +186,7 @@ function actualizarModo(){
   //Actualizo icono github de cada proyecto
   let githubProyectosLogos = document.querySelectorAll(".githubProyecto");
   githubProyectosLogos.forEach(img => {
-    img.src = `img/logos/githubLogo${getModoTexto()}.png`;
+    img.src = `img/logos/githubLogo${getModoTexto()}.svg`;
   });
 
 
@@ -183,24 +196,24 @@ function actualizarModo(){
   mostrarTecnologias();
 
   //Cambiar color letra y fondo
-  document.body.classList.toggle("claro");
+  document.body.classList.toggle("claro"); //Activo o desactivo la clase claro al body
 
   //Cambiar iconos contacto
   let gmail = document.getElementById("gmailLogo");
-  gmail.src= `img/logos/gmailLogo${getModoTexto()}.png`;
+  gmail.src= `img/logos/gmailLogo${getModoTexto()}.svg`;
 
    let github = document.getElementById("github");
-   github.src= `img/logos/githubLogo${getModoTexto()}.png`;
+   github.src= `img/logos/githubLogo${getModoTexto()}.svg`;
 
    let linkedin = document.getElementById("linkedin");
-   linkedin.src= `img/logos/linkedinLogo${getModoTexto()}.png`;
+   linkedin.src= `img/logos/linkedinLogo${getModoTexto()}.svg`;
 }
 
 //Boton para cambiar el modo
 const botonModoOscuro = document.getElementById("modoOscuro");
 
 botonModoOscuro.addEventListener("click", function(){
-  botonModoOscuro.classList.toggle("activo");
+  botonModoOscuro.classList.toggle("activo"); //Activar o desactivar la clase activo al boton
   modoOscuro = !modoOscuro;
   actualizarModo();
 });
@@ -216,5 +229,5 @@ cargarIdioma("es");
 botonMenu = document.getElementById("botonMenu");
 
 botonMenu.addEventListener("click", function(){
-  document.getElementById("botonEncabezado").classList.toggle('show');
+  document.getElementById("botonEncabezado").classList.toggle('show'); //Activar o desactivar la clase show
 });

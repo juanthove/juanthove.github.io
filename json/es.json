@@ -7,9 +7,9 @@
     "proyectos": "Proyectos",
     "proyectosLista": [
         {
-            "title": "Videojuego para 2 personas",
+            "title": "Videojuego de estrategia para dos jugadores",
             "github": "https://github.com/juanthove/videojuegoDronesUnity",
-            "desc": "Videojuego web online para dos personas de estrategia en Unity donde un jugador ataca con seis drones y el otro jugador defiende con cañones, misiles y radares",
+            "desc": "Videojuego web online para dos jugadores. Un jugador asume el rol de atacante con seis drones, intentando superar las defensas del rival. El otro jugador defiende su base usando cañones, misiles y radares. La partida requiere estrategia, coordinación y rapidez de decisión",
             "year": 2024,
             "image": "img/VideojuegoDrones.jpeg",
             "tecnologias": [

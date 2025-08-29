@@ -7,9 +7,9 @@
     "proyectos": "Projects",
     "proyectosLista": [
         {
-            "title": "Two-Player Video Game",
+            "title": "Two-Player Strategy Video Game",
             "github": "https://github.com/juanthove/videojuegoDronesUnity",
-            "desc": "Online strategy game for two players about drones attacking a fortress in Unity",
+            "desc": "Online web game for two players. One player takes on the role of attacker with six drones, trying to overcome the opponent’s defenses. The other player defends their base using cannons, missiles, and radars. The match requires strategy, coordination, and quick decision-making",
             "year": 2024,
             "image": "img/VideojuegoDrones.jpeg",
             "tecnologias": [
