@@ -26,16 +26,6 @@
             "tecnologias": [
                 "Genexus"
             ]
-        },
-        {
-            "title": "Proyecto 2",
-            "github": "URLGITHUB",
-            "desc": "Descripcion 2",
-            "year": "----",
-            "image": "img/ComingSoon.jpg",
-            "tecnologias": [
-                "Proximamente"
-            ]
         }
     ],
     "estudios": "Estudios",
