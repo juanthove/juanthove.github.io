@@ -2,22 +2,34 @@
     "title": "My portfolio",
     "cv": "Download CV",
     "sobreMi": "About Me",
-    "presentacion": "Hi, my name is Juan Thove, I am a full stack development student from Colonia del Sacramento",
+    "presentacion": "Hi, my name is Juan Thove. I am a full stack development student from Colonia del Sacramento. I am passionate about learning new technologies and building projects that create real impact. I am looking for my first job opportunity to contribute my knowledge and continue growing in the IT world",
     "tecnologias": "Technologies",
     "proyectos": "Projects",
     "proyectosLista": [
         {
             "title": "Two-Player Video Game",
+            "github": "https://github.com/juanthove/videojuegoDronesUnity",
             "desc": "Online strategy game for two players about drones attacking a fortress in Unity",
             "year": 2024,
             "image": "img/VideojuegoDrones.jpeg",
             "tecnologias": [
-                "Python",
+                "C#",
                 "Unity"
             ]
         },
         {
+            "title": "Online Store",
+            "github": "https://github.com/juanthove/onlineShopGenexus",
+            "desc": "Online store developed with Genexus, where users can register with loyalty cards, create shopping carts, and select products. Each product includes information about its country of origin, supplier, and seller, and can be filtered by seller, country, category, or supplier",
+            "year": "2024",
+            "image": "img/OnlineShopGenexus.jpg",
+            "tecnologias": [
+                "Genexus"
+            ]
+        },
+        {
             "title": "Project 2",
+            "github": "URLGITHUB",
             "desc": "Description 2",
             "year": "----",
             "image": "img/ComingSoon.jpg",
@@ -33,5 +45,5 @@
         "Jovenes a Programar (In progress)"
     ],
     "contacto": "Contact Me",
-    "textoContacto": "You can contact me at juanthove911@gmail.com or through my social networks"
+    "textoContacto": "You can contact me via email or through my social media"
 }

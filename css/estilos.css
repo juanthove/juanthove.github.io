@@ -2,6 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/*Aspecto general y del modo oscuro activo*/
 body {
     background-color: #10001d;
     text-align: center;
@@ -14,8 +15,59 @@ body {
 }
 
 
+/*Aspecto cuando está el modo claro activado*/
+body.claro{
+    background-color: #efe9fa;
+    color: black;
+}
+
+body.claro #modoOscuro{
+    background-color: rgba(245, 242, 242, 0.699)
+}
+
+body.claro #textoPresentacion{
+    color: black;
+}
+
+body.claro #cv{
+    color: black;
+    border-color: black;
+}
+
+body.claro .tecnologia{
+    background-color: rgba(212, 210, 210, 0.541);
+}
+
+body.claro .tecnologia:hover{
+    background-color: #989799; /*Cambiar el color a uno mas oscuro*/ 
+}
+
+body.claro .proyecto{
+    background-color: rgba(224, 224, 224, 0.541);
+}
+
+body.claro .githubProyecto{
+    border-color: black;
+}
+
+body.claro .tecnologiaProy{
+    background-color: rgba(212, 210, 210, 0.541);
+}
+
+body.claro #estudiosLista{
+    border-color: black;
+}
+
+body.claro #sectionContacto a{
+    border-color: black;
+}
+
+
+
+
 /*Encabezado*/
 #encabezado{
+    top:100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.836);
     padding: 0em 1em;
@@ -28,25 +80,23 @@ body {
     justify-content: space-between;
     z-index: 1000;
     height: auto;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
 }
 
 h1{
-    font-size: 110%;
+    font-size: 120%;
     background: linear-gradient(to right, rgb(221, 34, 221), rgb(233, 93, 191), rgb(42, 204, 182), skyblue);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/*#modoOscuro{
-    margin-right: 3em;
-}*/
-
-.botonEncabezado{
+#botonEncabezado{
     display: flex;
     gap: 2em;
     align-items: center;
     text-decoration: none;
     color: white;
+    user-select: none;
 }
 
 #anclas{
@@ -57,10 +107,12 @@ h1{
 #anclas a{
     text-decoration: none;
     color: white;
+    transition: transform 0.6s ease;
 }
 
-.botonEncabezado a:hover{
-    transform: scale(1.15);
+#anclas a:hover{
+    transform: scale(1.1);
+    color: rgb(143, 1, 226);
 }
 
 #idiomas{
@@ -69,17 +121,18 @@ h1{
     padding-left: 1em;
 }
 
-.botonEncabezado button{
+#idiomas img{
+    width: clamp(85%, 1.5vw, 100%);
+    height: clamp(85%, 1.5vw, 100%);
+}
+
+#botonEncabezado button{
     height: 2em;
     width: 4.2em;
+    cursor: pointer;
 }
 
-.idioma img{
-    height: 100%;
-    width: 100%;
-}
-
-.botonEncabezado button:hover{
+#botonEncabezado button:hover{
     transform: scale(1.15);
 }
 
@@ -91,41 +144,101 @@ h1{
     transition: transform 0.6s ease;
 }
 
+#botonMenu{
+    display: none;
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+    cursor: pointer;
+}
 
+#modoOscuro {
+    width: 60px;
+    height: 30px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 100px;
+    border: rgb(59, 3, 92) solid 2px;
+    background-color: rgba(255,255,255,0.05);
+
+    cursor: pointer;
+}
+
+#modoOscuro img{
+    font-size: 1rem;
+    color: #fdc21c;
+}
+
+#modoOscuro::before{
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: solid thin #000;
+    left: 0;
+    right: unset;
+}
+
+#modoOscuro.activo::before{
+    right: 0;
+    left: unset;
+    border: solid thin #ffffff;
+}
+
+#luna{
+    width: 40%;
+    height: auto;
+}
+
+#sol{
+    width: 40%;
+    height: auto;
+}
 
 
 /*Secciones*/
-#primeraSection{
-    width: 100vw;
-    background-color:rgba(255, 255, 255, 0);
-    position: relative;
-    height: 20em;
-}
-
 .section{
-    width: 100vw;
+    width: 100%;
     position: relative;
     padding-top: 2em;
 }
 
 
 /*Sobre Mi*/
-#yo{
-    border-radius: 50%;
-    width: 150px;
-    height: auto;
+#sectionSobreMi{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column; /*Para que Descargar CV quede debajo*/
+    align-items: center;
 }
 
 .presentacion{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
-    gap: 1em;
+    gap: 3em;
     color:rgb(110, 209, 143);
+    max-width: 60em;
+    width:100%;
+}
+
+#yo{
+    border-radius: 50%;
+    width: 10em;
+    height: auto;
 }
 
 .texto{
-    max-width: 30em;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    max-width: 40em;
+    flex: 1 1 auto; /*Para que el texto salte a otra linea*/
 }
 
 #cv{
@@ -133,13 +246,17 @@ h1{
     display: flex;
     justify-content: center; 
     align-items: center; 
-    display: flex;
     text-decoration: none;
     color: white;
     padding: 0.5em 1em;
     border: 0.1em solid white;
-    border-radius: 30%;
-    
+    border-radius: 2em;
+    max-width: 8em;
+    transition: transform 0.3s ease;
+}
+
+#cv:hover{
+    transform: scale(1.1);
 }
 
 #imagenCV{
@@ -149,7 +266,6 @@ h1{
 }
 
 #descargarCV{
-    height: auto;
     font-weight: 400;
 }
 
@@ -160,12 +276,15 @@ h1{
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
+    user-select: none;
 }
 
 .tecnologia{
     display: flex;
     align-items: center;
     gap: 0.5em;
+    flex: 0 1 auto;
+    min-width: 4em;
     background-color: rgba(255,255,255,0.05);
     padding: 0.5em 2em;
     border-radius: 0.7em;
@@ -173,8 +292,9 @@ h1{
 }
 
 .tecnologia img{
-    width: 24px;
-    height: 24px;
+
+    width: 2em;
+    height: 2em;
     transition: all 0.6s ease; /*Que la transicion del aumento de tamaño demore 0.6 segundos y se haga suave*/
 }
 
@@ -214,15 +334,27 @@ h1{
     border-radius: 5%;
     width: 40%;
     margin-left: 1em;
-    
+    max-width: 38em;
 }
 
 .imagenProyecto{
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    border: solid transparent 2px;
-    transition: border-color 0.3s ease;
+    border-radius: 2em;
+}
+
+.githubProyecto{ /*Imagen de github de cada proyecto*/
+    width: 2em;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+    margin-top: 1em;
+    border: 0.1em solid white;
+    border-radius: 50%;
+    padding: 0.3em;
+}
+
+.githubProyecto:hover{
+    transform: scale(1.15);
 }
 
 .tecnologiasProyecto{ /*Tecnologias de cada proyecto*/
@@ -239,11 +371,12 @@ h1{
     background-color: rgba(255,255,255,0.05);
     padding: 0em 0.7em;
     border-radius: 0.7em;
+    user-select: none;
 }
 
 .tecnologiaProy img{
-    width: 24px;
-    height: 24px;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 
@@ -293,5 +426,11 @@ h1{
     width: 65% !important;
     height: auto;
 }
+
+#linkedin{
+    width: 80% !important;
+    height: auto;
+}
+
 
 

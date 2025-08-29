@@ -2,22 +2,34 @@
     "title": "Mi portafolio",
     "cv": "Descargar CV",
     "sobreMi": "Sobre Mi",
-    "presentacion": "Hola, mi nombre es Juan Thove, soy un estudiante de desarrollo full stack de Colonia del Sacramento",
+    "presentacion": "Hola, mi nombre es Juan Thove, soy un estudiante de desarrollo full stack de Colonia del Sacramento. Me apasiona aprender nuevas tecnologías y construir proyectos que generen impacto real. Busco mi primera oportunidad laboral para aportar mis conocimientos y seguir creciendo en el mundo IT",
     "tecnologias": "Tecnologías",
     "proyectos": "Proyectos",
     "proyectosLista": [
         {
             "title": "Videojuego para 2 personas",
-            "desc": "Videojuego online para dos personas de estrategia sobre drones atacando una fortaleza en Unity",
+            "github": "https://github.com/juanthove/videojuegoDronesUnity",
+            "desc": "Videojuego web online para dos personas de estrategia en Unity donde un jugador ataca con seis drones y el otro jugador defiende con cañones, misiles y radares",
             "year": 2024,
             "image": "img/VideojuegoDrones.jpeg",
             "tecnologias": [
-                "Python",
+                "C#",
                 "Unity"
             ]
         },
         {
+            "title": "Tienda Online",
+            "github": "https://github.com/juanthove/onlineShopGenexus",
+            "desc": "Tienda online desarrollada con Genexus, donde los usuarios pueden registrarse con tarjetas de puntos, crear carritos de compra y seleccionar productos. Cada producto cuenta con información de país de origen, proveedor y vendedor, y puede filtrarse por vendedor, país, categoría o proveedor",
+            "year": "2024",
+            "image": "img/OnlineShopGenexus.jpg",
+            "tecnologias": [
+                "Genexus"
+            ]
+        },
+        {
             "title": "Proyecto 2",
+            "github": "URLGITHUB",
             "desc": "Descripcion 2",
             "year": "----",
             "image": "img/ComingSoon.jpg",
@@ -33,5 +45,5 @@
         "Jovenes a Programar (En curso)"
     ],
     "contacto": "Contactame",
-    "textoContacto": "Puedes contactarme mediante juanthove911@gmail.com o en mis redes"
+    "textoContacto": "Puedes contactarme por correo electrónico o a través de mis redes"
 }

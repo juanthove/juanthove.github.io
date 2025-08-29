@@ -1,30 +1,40 @@
 [
     {
         "name": "Java",
-        "image": "img/javaLogo.png"
+        "image": "img/logos/javaLogo"
     },
     {
         "name": "C++",
-        "image": "img/c++Logo.png"
+        "image": "img/logos/c++Logo"
     },
 
     {
-        "name": ".NET",
-        "image": "img/netLogo.png"
-    },
-
-    {
-        "name": "Python",
-        "image": "img/pythonLogo.png"
+        "name": "C#",
+        "image": "img/logos/cLogo"
     },
     
     {
         "name": "Unity",
-        "image": "img/unityLogo.png"
+        "image": "img/logos/unityLogo"
     },
 
     {
         "name": "Genexus",
-        "image": "img/genexusLogo.png"
+        "image": "img/logos/genexusLogo"
+    },
+
+    {
+        "name": "HTML",
+        "image": "img/logos/htmlLogo"
+    },
+
+    {
+        "name": "CSS",
+        "image": "img/logos/cssLogo"
+    },
+
+    {
+        "name": "JavaScript",
+        "image": "img/logos/javaScriptLogo"
     }
 ]

@@ -1,14 +1,23 @@
 let idiomaActual = "en";
 
-let proyectos = [];
+let modoOscuro = true;
 
+let proyectos = [];
 let tecnologias = [];
 
 const botonEspañol = document.getElementById("botonEsp");
 const botonIngles = document.getElementById("botonEng");
 
+//Funcion que cambia el modo
+function getModoTexto(){
+  return modoOscuro ? "Blanco" : "Negro";
+}
+
+
+
 //Inserto los proyectos en el HTML
 function mostrarProyectos(proyectos){
+
   let contenedorProyectos = document.getElementById("proyectosLista");
   contenedorProyectos.innerHTML = "";
 
@@ -21,33 +30,40 @@ function mostrarProyectos(proyectos){
                 <p>${item.desc}</p>
                 <p>${item.year}</p>
                 <div class="tecnologiasProyecto"></div>
+                <a href="${item.github}" target="blank"><img src="img/logos/githubLogo${getModoTexto()}.png" alt="Github" class="githubProyecto"></a>
               </div>
     `
   });
 
+  insertarTecnologiasProyectos(proyectos, contenedorProyectos);
+}
+
+//Funcion que inserta las tecnologias del proyecto, le paso el proyecto y el contenedor donde se insertan
+function insertarTecnologiasProyectos(proyectos, contenedorProyectos){
+
   //Inserto las tecnologias del proyecto
-    proyectos.forEach((proyecto, index) => { //Recorro los proyectos y obtengo el indice
+  proyectos.forEach((proyecto, index) => { //Recorro los proyectos y obtengo el indice
 
-      //Obtengo el contenedor de las tecnologias como la etiqueta con la clase tecnologiasProyecto del hijo del contenedorProyectos del indice actual
-      let contenedorTecnologias = contenedorProyectos.children[index].querySelector(".tecnologiasProyecto"); 
+    //Obtengo el contenedor de las tecnologias como la etiqueta con la clase tecnologiasProyecto del hijo del contenedorProyectos del indice actual
+    let contenedorTecnologias = contenedorProyectos.children[index].querySelector(".tecnologiasProyecto"); 
+    contenedorTecnologias.innerHTML = "";
+    //Por cada tecnologia que tiene el proyecto actual
+    proyecto.tecnologias.forEach(nombreTec => {
+        //Obtengo la tecnologia del proyecto del arreglo de tecnologias
+        let tec = tecnologias.find(t => t.name === nombreTec);
+        if(tec){
+          //Inserto la tecnologia
+          contenedorTecnologias.innerHTML += `
+              <div class="tecnologiaProy">
+                  <img src="${tec.image}${getModoTexto()}.png" alt="${tec.name}">
+                  <p>${tec.name}</p>
+                </div>
+          `
+        }
+        
 
-      //Por cada tecnologia que tiene el proyecto actual
-      proyecto.tecnologias.forEach(nombreTec => {
-          //Obtengo la tecnologia del proyecto del arreglo de tecnologias
-          let tec = tecnologias.find(t => t.name === nombreTec);
-          if(tec){
-            //Inserto la tecnologia
-            contenedorTecnologias.innerHTML += `
-                <div class="tecnologiaProy">
-                    <img src="${tec.image}" alt="${tec.name}">
-                    <p>${tec.name}</p>
-                  </div>
-            `
-          }
-          
-
-      });
     });
+  });
 }
 
 
@@ -90,7 +106,8 @@ function cambiarTexto(texto) {
   });
 
   //Insertar proyectos
-  mostrarProyectos(texto.proyectosLista);
+  proyectos = texto.proyectosLista;
+  mostrarProyectos(proyectos);
 
   // Insertar lista de estudios
   const listaEstudios = document.getElementById("estudiosLista");
@@ -106,7 +123,7 @@ function cambiarTexto(texto) {
 }
 
 botonEspañol.addEventListener("click", function(){
-  cargarIdioma("es");
+    cargarIdioma("es");
 });
 
 botonIngles.addEventListener("click", function(){
@@ -114,6 +131,7 @@ botonIngles.addEventListener("click", function(){
 });
 
 
+//Tecnologias
 function cargarTecnologias(){
   fetch("json/tecnologias.json").then(response => {
       if (response.ok) {
@@ -128,16 +146,64 @@ function cargarTecnologias(){
 }
 
 function mostrarTecnologias(){
-  const listaTecnologias = document.getElementById("tecnologiasLista");
+
+  let listaTecnologias = document.getElementById("tecnologiasLista");
     tecnologias.forEach(item => {
       listaTecnologias.innerHTML += `
                 <div class="tecnologia">
-                  <img src="${item.image}" alt="${item.name}">
+                  <img src="${item.image}${getModoTexto()}.png" alt="${item.name}">
                   <p>${item.name}</p>
                 </div>
       `
     });
 }
+
+
+//Modo Oscuro 
+function actualizarModo(){
+  //Cambio icono descarga CV
+  let cv = document.getElementById("imagenCV");
+  cv.src= `img/logos/flechaDescarga${getModoTexto()}.png`;
+  
+
+  //Actualizo los logos de las tecnologias de cada proyecto
+  let contenedorProyectos = document.getElementById("proyectosLista");
+  insertarTecnologiasProyectos(proyectos, contenedorProyectos);
+
+  //Actualizo icono github de cada proyecto
+  let githubProyectosLogos = document.querySelectorAll(".githubProyecto");
+  githubProyectosLogos.forEach(img => {
+    img.src = `img/logos/githubLogo${getModoTexto()}.png`;
+  });
+
+
+  //Actualizo los logos de las tecnologias
+  let listaTecnologias = document.getElementById("tecnologiasLista");
+  listaTecnologias.innerHTML = "";
+  mostrarTecnologias();
+
+  //Cambiar color letra y fondo
+  document.body.classList.toggle("claro");
+
+  //Cambiar iconos contacto
+  let gmail = document.getElementById("gmailLogo");
+  gmail.src= `img/logos/gmailLogo${getModoTexto()}.png`;
+
+   let github = document.getElementById("github");
+   github.src= `img/logos/githubLogo${getModoTexto()}.png`;
+
+   let linkedin = document.getElementById("linkedin");
+   linkedin.src= `img/logos/linkedinLogo${getModoTexto()}.png`;
+}
+
+//Boton para cambiar el modo
+const botonModoOscuro = document.getElementById("modoOscuro");
+
+botonModoOscuro.addEventListener("click", function(){
+  botonModoOscuro.classList.toggle("activo");
+  modoOscuro = !modoOscuro;
+  actualizarModo();
+});
 
 
 //Muestro las tecnologias 1 sola vez
@@ -146,3 +212,9 @@ cargarTecnologias();
 // Cargar español al inicio
 cargarIdioma("es");
 
+
+botonMenu = document.getElementById("botonMenu");
+
+botonMenu.addEventListener("click", function(){
+  document.getElementById("botonEncabezado").classList.toggle('show');
+});

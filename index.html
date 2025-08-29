@@ -5,14 +5,16 @@
         <meta charset="UTF-8">
         <title>Mi Portafolio</title>
         <link href="css/estilos.css" rel="stylesheet" type="text/css">
+        <link href="css/estilosClaro.css" rel="stylesheet" type="text/css">
+        <link href="css/responsive.css" rel="stylesheet" type="text/css">
         <script src="js/informacionIdioma.js" defer></script>
     </head>
     <body>
         <!--Encabezado-->
         <header id="encabezado">
             <h1>Juan Thove</h1>
-            <div class="botonEncabezado">
-                <!--<button id="modoOscuro">Modo Oscuro</button>-->
+
+            <div id="botonEncabezado">
                 <div id="anclas">
                     <a href="#sectionSobreMi" id="sobreMi"></a>
                     <a href="#sectionTecnologias" class="tecnologias"></a>
@@ -25,23 +27,25 @@
                     <button class="idioma" id="botonEsp"><img src="img/banderaEspaña.png"></button>
                     <button class="idioma" id="botonEng"><img src="img/banderEstadosUnidos.png"></button>
                 </div>
-                
-                
+                <div id="modoOscuro">
+                    <img src="img/solNegro.png" alt="sol" id="sol" class="botonModoOscuro">
+                    <img src="img/lunaBlanca.png" alt="luna" id="luna" class="botonModoOscuro">
+                </div>
             </div>
+
+            <button id="botonMenu">☰</button>
         </header>
         
 
         <!--Sobre Mi-->
-        <div id="primeraSection">
-            <img src="img/Yo.jpeg" id="yo">
-        </div>
-        
         <div class="section" id="sectionSobreMi">
             <div class="presentacion">
+                <img src="img/Yo.jpeg" id="yo">
                 <p class="texto" id="textoPresentacion"></p>
-                <a href="CVJuanThove.pdf" download="CV Juan Thove" id="cv"><img src="img/flechaDescarga.png" id="imagenCV"> <div id="descargarCV"></div></a>
-                
             </div>
+
+            <a href="CVJuanThove.pdf" download="CV Juan Thove" id="cv"><img src="img/logos/flechaDescargaBlanco.png" id="imagenCV"> <div id="descargarCV"></div></a>
+            
         </div>
         
 
@@ -71,11 +75,11 @@
             <h2 class="contacto"></h2>
             <p id="textoContacto"></p>
             <div id="gmail">
-                <img src="img/gmailBlanco.png">
+                <img src="img/logos/gmailLogoBlanco.png" alt="Gmail" id="gmailLogo">
                 <p>juanthove911@gmail.com</p>
             </div>
-            <a href="https://github.com/juanthove" target="blank"><img src="img/githubLogo.png" alt="Github" id="github"></a>
-            <a href="https://uy.linkedin.com/in/juan-thove" target="blank"><img src="img/linkedinLogo.png" alt="Linkedin" id="linkedin"></a>
+            <a href="https://github.com/juanthove" target="blank"><img src="img/logos/githubLogoBlanco.png" alt="Github" id="github"></a>
+            <a href="https://uy.linkedin.com/in/juan-thove" target="blank"><img src="img/logos/linkedinLogoBlanco.png" alt="Linkedin" id="linkedin"></a>
             <!--<a href="mailto:juanthove911@gmail.com"><img src="img/gmailLogo.png" alt="Gmail" id="gmail"></a>-->
         </div>
         
