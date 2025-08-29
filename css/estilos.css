@@ -22,7 +22,8 @@ body.claro{
 }
 
 body.claro #modoOscuro{
-    background-color: rgba(245, 242, 242, 0.699)
+    background-color: rgba(245, 242, 242, 0.699);
+    border-color: rgb(73, 73, 73);
 }
 
 body.claro #textoPresentacion{
@@ -154,17 +155,16 @@ h1{
 }
 
 #modoOscuro {
-    width: 60px;
-    height: 30px;
-    padding: 0 5px;
+    width: 3.90em;
+    height: 1.95em;
+    padding: 0 0.33em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    border-radius: 100px;
-    border: rgb(59, 3, 92) solid 2px;
+    border-radius: 6.7em;
+    border: rgb(59, 3, 92) solid 0.2em;
     background-color: rgba(255,255,255,0.05);
-
     cursor: pointer;
 }
 
@@ -176,8 +176,8 @@ h1{
 #modoOscuro::before{
     content: "";
     position: absolute;
-    height: 25px;
-    width: 25px;
+    height: 1.7em;
+    width: 1.7em;
     border-radius: 50%;
     background-color: #ffffff;
     border: solid thin #000;
@@ -384,8 +384,8 @@ h1{
 /*Estudios*/
 .lista{
     border: solid rgb(255, 255, 255) 1px;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-radius: 1.2em;
+    padding: 0.6em 1.2em;
     width: fit-content;
     margin: 0 auto;
     list-style-position: inside;
