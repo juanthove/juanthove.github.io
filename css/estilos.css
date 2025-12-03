@@ -63,7 +63,15 @@ body.claro #sectionContacto a{
     border-color: black;
 }
 
+body.claro .botonImgProyectoAnt:hover .svgFlechas{
+    transform: scale(1.1);
+    color: rgba(138, 138, 138, 0.582);
+}
 
+body.claro .botonImgProyectoSig:hover .svgFlechas{
+    transform: scale(1.1);
+    color: rgba(138, 138, 138, 0.582);
+}
 
 
 /*Encabezado*/
@@ -336,10 +344,75 @@ h1{
     max-width: 38em;
 }
 
+/*Carrusel de imagenes del proyecto*/
+.carrusel{
+    display: inline-block;
+    position: relative;
+    
+}
+
 .imagenProyecto{
     width: 100%;
     border-radius: 2em;
 }
+
+.contenedorPuntos{ /*Contenedor de los puntos de la imagen*/
+    display:flex;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 0.6em;
+}
+
+.puntoImagen{ /*Puntos de la imagen*/
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.582);
+    transition: 0.5s;
+}
+
+.puntoImagen.puntoActivo{ /*Punto activo de la imagen*/
+    background: rgba(255, 255, 255, 0.863);
+}
+
+.botonImgProyectoAnt, .botonImgProyectoSig{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonImgProyectoAnt{
+    left: -1em;
+}
+
+.botonImgProyectoSig {
+    right: -1em;
+}
+
+.svgFlechas{
+    width: 3em;
+    color: rgba(255, 255, 255, 0.582);
+    pointer-events: none;
+    transition: all 0.6s ease;
+}
+
+.botonImgProyectoAnt:hover .svgFlechas{
+    transform: scale(1.1);
+    color: rgba(90, 3, 141, 0.582);
+}
+
+.botonImgProyectoSig:hover .svgFlechas{
+    transform: scale(1.1);
+    color: rgba(90, 3, 141, 0.582);
+}
+
 
 .githubProyecto{ /*Imagen de github de cada proyecto*/
     width: 2em;

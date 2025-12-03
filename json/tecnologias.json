@@ -36,5 +36,15 @@
     {
         "name": "JavaScript",
         "image": "img/logos/javaScriptLogo"
+    },
+
+    {
+        "name": "NodeJs",
+        "image": "img/logos/nodeJsLogo"
+    },
+
+    {
+        "name": "SQL",
+        "image": "img/logos/sqlLogo"
     }
 ]
