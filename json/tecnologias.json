@@ -46,5 +46,15 @@
     {
         "name": "SQL",
         "image": "img/logos/sqlLogo"
+    },
+
+    {
+        "name": "Spring Boot",
+        "image": "img/logos/springBootLogo"
+    },
+
+    {
+        "name": "React",
+        "image": "img/logos/reactLogo"
     }
 ]
