@@ -12,7 +12,7 @@
             "desc": "Online web game for two players. One player takes on the role of attacker with six drones, trying to overcome the opponent’s defenses. The other player defends their base using cannons, missiles, and radars. The match requires strategy, coordination, and quick decision-making",
             "year": 2024,
             "image": [
-                "img/Project/Dron/VideojuegoDrones.jpeg"
+                "img/Projects/Dron/VideojuegoDrones.jpeg"
             ],
             "tecnologias": [
                 "C#",
@@ -25,10 +25,10 @@
             "desc": "Online store developed with Genexus, where users can register with loyalty cards, create shopping carts, and select products. Each product includes information about its country of origin, supplier, and seller, and can be filtered by seller, country, category, or supplier",
             "year": "2024",
             "image": [
-                "img/Project/OnlineShop/OnlineShopGenexus.jpg",
-                "img/Project/OnlineShop/OnlineShopGenexusCart.jpeg",
-                "img/Project/OnlineShop/OnlineShopGenexusSeller.jpeg",
-                "img/Project/OnlineShop/OnlineShopGenexusCustomer.jpeg"
+                "img/Projects/OnlineShop/OnlineShopGenexus.jpg",
+                "img/Projects/OnlineShop/OnlineShopGenexusCart.jpeg",
+                "img/Projects/OnlineShop/OnlineShopGenexusSeller.jpeg",
+                "img/Projects/OnlineShop/OnlineShopGenexusCustomer.jpeg"
             ],
             "tecnologias": [
                 "Genexus"
@@ -40,8 +40,8 @@
             "desc": "Web e-commerce developed as a project at JAP, built from an initial base structure. The system allows users to browse products organized by categories, view detailed information for each item, and manage their user profile. It also includes frontend customization, full database design, and the integration of a custom API to fetch data and handle the shopping cart using GET and POST requests.",
             "year": "2025",
             "image": [
-                "img/Project/E-Commerce/E-CommercePrincipal.jpeg",
-                "img/Project/E-Commerce/E-CommerceCart.jpeg"
+                "img/Projects/E-Commerce/E-CommercePrincipal.jpeg",
+                "img/Projects/E-Commerce/E-CommerceCart.jpeg"
             ],
             "tecnologias": [
                 "HTML",
@@ -57,11 +57,11 @@
             "desc": "GymApp is a full-stack web application developed using React, Material UI, Java, and Spring Boot. The project includes user authentication, exercise and workout management, workout template creation, weekly progress tracking, and content administration through a dedicated management panel. The solution uses a custom REST API, Spring Data JPA for SQL database persistence, and file storage for workout-related images and media.",
             "year": "2026",
             "image": [
-                "img/Project/GymApp/Administrator.jpeg",
-                "img/Project/GymApp/ExercisesSelector.jpeg",
-                "img/Project/GymApp/DaySelector.jpeg",
-                "img/Project/GymApp/ExercisesDay.jpeg",
-                "img/Project/GymApp/FinalScreen.jpeg"
+                "img/Projects/GymApp/Administrator.jpeg",
+                "img/Projects/GymApp/ExercisesSelector.jpeg",
+                "img/Projects/GymApp/DaySelector.jpeg",
+                "img/Projects/GymApp/ExercisesDay.jpeg",
+                "img/Projects/GymApp/FinalScreen.jpeg"
             ],
             "tecnologias": [
                 "React",
