@@ -2,7 +2,7 @@
     "title": "Mi portafolio",
     "cv": "Descargar CV",
     "sobreMi": "Sobre Mi",
-    "presentacion": "Hola, mi nombre es Juan Thove, soy un estudiante de desarrollo full stack de Colonia del Sacramento. Me apasiona aprender nuevas tecnologías y construir proyectos que generen impacto real. Busco mi primera oportunidad laboral para aportar mis conocimientos y seguir creciendo en el mundo IT",
+    "presentacion": "Hola, mi nombre es Juan Thove. Soy desarrollador Full Stack de Colonia del Sacramento, Uruguay. Recientemente finalicé la Licenciatura en Informática y continúo ampliando mis conocimientos mediante el desarrollo de proyectos y el aprendizaje de nuevas tecnologías. Me apasiona crear soluciones que generen un impacto real y seguir creciendo profesionalmente en el mundo IT.",
     "tecnologias": "Tecnologías",
     "proyectos": "Proyectos",
     "proyectosLista": [
@@ -75,8 +75,8 @@
     "estudios": "Estudios",
     "estudiosLista": [
         "Bachillerato en Informatica",
-        "Licenciatura en Informatica (En curso)",
-        "Jovenes a Programar (En curso)"
+        "Licenciatura en Informatica",
+        "Jovenes a Programar"
     ],
     "contacto": "Contactame",
     "textoContacto": "Puedes contactarme por correo electrónico o a través de mis redes"

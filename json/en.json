@@ -2,7 +2,7 @@
     "title": "My portfolio",
     "cv": "Download CV",
     "sobreMi": "About Me",
-    "presentacion": "Hi, my name is Juan Thove. I am a full stack development student from Colonia del Sacramento. I am passionate about learning new technologies and building projects that create real impact. I am looking for my first job opportunity to contribute my knowledge and continue growing in the IT world",
+    "presentacion": "Hi, my name is Juan Thove. I'm a Full Stack Software Developer from Colonia del Sacramento, Uruguay. I recently completed my Bachelor's degree in Computer Science and continue expanding my skills by building projects and learning new technologies. I'm passionate about creating solutions that make a real impact and continuously growing as an IT professional.",
     "tecnologias": "Technologies",
     "proyectos": "Projects",
     "proyectosLista": [
@@ -75,8 +75,8 @@
     "estudios": "Education",
     "estudiosLista": [
         "High School in Computer Science",
-        "Bachelor in Computer Science (In progress)",
-        "Jovenes a Programar (In progress)"
+        "Bachelor in Computer Science",
+        "Jovenes a Programar"
     ],
     "contacto": "Contact Me",
     "textoContacto": "You can contact me via email or through my social media"
